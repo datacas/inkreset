@@ -8,6 +8,14 @@
   <a href="https://github.com/datacas/inkreset/releases/latest"><strong>Download the latest Windows release</strong></a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/datacas/inkreset/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/datacas/inkreset?style=flat-square&color=e2542f"></a>
+  <a href="https://github.com/datacas/inkreset/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/datacas/inkreset/ci.yml?style=flat-square"></a>
+  <img alt="Downloads" src="https://img.shields.io/github/downloads/datacas/inkreset/total?style=flat-square">
+  <img alt="License" src="https://img.shields.io/github/license/datacas/inkreset?style=flat-square">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-windows%20x64-2b6cb0?style=flat-square">
+</p>
+
 InkReset is an open-source desktop utility that reads and resets the **waste-ink
 counters** of Epson printers over USB. It talks to the printer directly through
 IEEE 1284.4 and the Epson EEPROM service commands — no vendor account, no licence

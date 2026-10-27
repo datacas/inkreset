@@ -2261,7 +2261,7 @@ input:focus-visible + .switch {
 
 .about-facts {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   overflow: hidden;
   background: var(--line-soft);
@@ -2293,7 +2293,7 @@ input:focus-visible + .switch {
 
 .about-notes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 16px;
 }
@@ -2325,6 +2325,10 @@ input:focus-visible + .switch {
 
 .about-notes p:nth-child(3) svg {
   color: var(--accent);
+}
+
+.about-notes p:nth-child(4) svg {
+  color: var(--good);
 }
 
 .about-foot {

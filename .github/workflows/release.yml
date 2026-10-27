@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
-
 jobs:
   build:
     runs-on: windows-latest
@@ -38,5 +36,5 @@ jobs:
             Only tested on an Epson XP-530. Other models are untested: run a read and the safe write test before resetting, at your own risk.
 
             Resetting a counter does not service the physical waste-ink pad.
-          releaseDraft: true
+          releaseDraft: false
           prerelease: false

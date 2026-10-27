@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InkReset — Reset your Epson waste ink pad counter over USB (Windows)</title>
+<meta name="description" content="Free Windows tool that reads and resets the waste ink pad counter of Epson printers over USB. No account, no licence key, no network. Tested on an Epson XP-530.">
+<link rel="canonical" href="https://datacas.github.io/inkreset/en/">
+<link rel="alternate" hreflang="es" href="https://datacas.github.io/inkreset/">
+<link rel="alternate" hreflang="en" href="https://datacas.github.io/inkreset/en/">
+<link rel="alternate" hreflang="x-default" href="https://datacas.github.io/inkreset/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InkReset">
+<meta property="og:title" content="InkReset — Epson waste ink counter over USB">
+<meta property="og:description" content="Read and reset your Epson waste ink pad counter. Local, keyless and open source. Tested on an XP-530.">
+<meta property="og:url" content="https://datacas.github.io/inkreset/en/">
+<meta property="og:image" content="https://datacas.github.io/inkreset/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="InkReset — Epson waste ink counter over USB">
+<meta name="twitter:description" content="Read and reset your Epson waste ink pad counter. Local, keyless and open source.">
+<meta name="twitter:image" content="https://datacas.github.io/inkreset/social-preview.png">
+<meta name="theme-color" content="#191e1b">
+<link rel="icon" href="../logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "InkReset",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "0.2.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "downloadUrl": "https://github.com/datacas/inkreset/releases/latest",
+  "codeRepository": "https://github.com/datacas/inkreset",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "description": "Open-source desktop utility that reads and resets the waste ink counters of Epson printers over USB using IEEE 1284.4."
+}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="./">
+      <img src="../logo.png" alt="">
+      INKRESET
+    </a>
+    <nav class="topnav">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#install">Install</a>
+      <a href="#safety">Safety</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/datacas/inkreset">GitHub</a>
+    </nav>
+    <a class="lang" href="../" hreflang="es">ES</a>
+    <a class="btn btn-primary" href="https://github.com/datacas/inkreset/releases/latest">Download</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="mono kicker">Local service bench · Windows x64</div>
+        <h1>Waste ink,<br>under control.</h1>
+        <p class="lead">
+          Read and reset the waste ink pad counter of your Epson over USB. No account,
+          no licence key and no network: the app talks to the printer directly through
+          IEEE 1284.4.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/datacas/inkreset/releases/latest">
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/datacas/inkreset">View source</a>
+        </div>
+        <p class="meta">Free · Open source · MIT · No install required</p>
+      </div>
+      <figure class="hero-shot">
+        <img src="../bench.png" width="1920" height="1080"
+             alt="InkReset showing an Epson XP-530: main pad at 19 % and borderless pad at 0 %">
+      </figure>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <span class="mark" aria-hidden="true">▲</span>
+      <p>
+        <b>A counter reset is not maintenance.</b>
+        It does not clean, replace or empty the physical absorber. Service the pad first:
+        resetting a saturated pad can make ink overflow.
+      </p>
+    </div>
+  </div>
+
+  <section id="tested">
+    <div class="wrap">
+      <div class="tested">
+        <div class="mono tag">Tested hardware</div>
+        <div>
+          <p>
+            InkReset has only been tested end to end on an <b>Epson XP-530</b>
+            (<code>MDL:XP-530 Series</code>): reading both counters and the safe write test.
+          </p>
+          <p>
+            The embedded database covers many other Epson models and the protocol should
+            work on them, but <b>those models are untested</b>. On a different printer, run a
+            read and the safe write test first, then reset at your own risk. The authors
+            accept no responsibility for damage caused to other printers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What it does, plainly</h2>
+        <p>Everything on screen is a real USB transaction executed by the native Rust
+          bridge.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Automatic discovery</h3>
+          <p>On launch it enumerates USB printer interfaces, reads the IEEE 1284 device ID
+            and resolves the model profile from the embedded database.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Real readings</h3>
+          <p>Every counter the model exposes, with raw register values and the full-scale
+            value the printer itself reports.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Gated reset</h3>
+          <p>The model is re-read from the device and has to be typed exactly. Without a
+            verified reset table, nothing is written.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Safe write test</h3>
+          <p>A self-test writes one EEPROM byte back unchanged, proving the whole write
+            path works before you touch a counter.</p>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <h3>Local only</h3>
+          <p>No telemetry, no licence server and no outbound request. Settings and history
+            stay on the machine.</p>
+        </article>
+        <article class="card">
+          <span class="num">06</span>
+          <h3>Bilingual UI</h3>
+          <p>Spanish by default, English available in Settings. No feature depends on the
+            language.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Screenshots</h2>
+        <p>Taken with a real XP-530 connected over USB.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot wide">
+          <img src="../bench.png" width="1920" height="1080" loading="lazy"
+               alt="InkReset main panel with the waste counters and the reset protocol">
+        </figure>
+        <figure class="shot">
+          <img src="../models.png" width="1920" height="1080" loading="lazy"
+               alt="Index of 846 documented Epson models">
+        </figure>
+        <figure class="shot">
+          <img src="../settings.png" width="1920" height="1080" loading="lazy"
+               alt="Settings and hardware bridge with the detected printer profile">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Install</h2>
+        <p>Windows 10 or 11, 64-bit. No account, no key, no activation.</p>
+      </div>
+      <div class="install">
+        <article class="step">
+          <div class="mono">Recommended</div>
+          <h3>Installer</h3>
+          <p>Installs the app and creates a shortcut. It can be removed from Settings like
+            any other program.</p>
+          <p><a href="https://github.com/datacas/inkreset/releases/latest">NSIS installer (.exe)</a></p>
+        </article>
+        <article class="step">
+          <div class="mono">No install</div>
+          <h3>Portable</h3>
+          <p>A single executable. Handy for a service USB stick.</p>
+          <p><a href="https://github.com/datacas/inkreset/releases/latest">Portable build (.exe)</a></p>
+        </article>
+        <article class="step">
+          <div class="mono">Managed</div>
+          <h3>MSI package</h3>
+          <p>For group policy or endpoint management tooling.</p>
+          <p><a href="https://github.com/datacas/inkreset/releases/latest">MSI package</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Safety model</h2>
+        <p>Writing to a printer EEPROM is irreversible. The app is built around that.</p>
+      </div>
+      <ul class="safety">
+        <li><b>Device-verified profile.</b> The model string is re-read from the printer
+          before a write; the UI cannot supply it.</li>
+        <li><b>Typed confirmation.</b> The exact <code>MDL:</code> string has to be typed.</li>
+        <li><b>No table, no write.</b> Models without reset data are read-only.</li>
+        <li><b>Verification after write.</b> Counters are read again and returned with the
+          result.</li>
+        <li><b>Never unverified bytes.</b> Every frame is checked against the profile
+          before it leaves.</li>
+        <li><b>Persistent warning.</b> The UI states that a reset does not service the
+          physical pad.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq">
+      <div class="section-head">
+        <h2>Frequently asked</h2>
+      </div>
+      <details>
+        <summary>Is it free?</summary>
+        <p>Yes. The code is MIT and the published builds are free. No “pro” edition, no
+          key and no reset limit.</p>
+      </details>
+      <details>
+        <summary>Does it send data anywhere?</summary>
+        <p>No. The app opens no network connections: it talks to the printer over USB and
+          keeps settings in local storage. No telemetry, no remote logging.</p>
+      </details>
+      <details>
+        <summary>Will it work with my Epson?</summary>
+        <p>Probably, but only an XP-530 is verified. The database ships 1,022 printer
+          records and 371 spec keys, and roughly 930 resolve to a usable service block. If
+          your model is untested, run a read and the safe write test first, and accept the
+          risk.</p>
+      </details>
+      <details>
+        <summary>What is the waste ink pad counter?</summary>
+        <p>An internal counter the printer increments on every head cleaning. When it
+          reaches the limit the firmware stops printing even though the printer still
+          works. Resetting returns the counter to zero; it does not replace the pad, which
+          is still soaked with ink.</p>
+      </details>
+      <details>
+        <summary>Do I need a licence key or an internet connection?</summary>
+        <p>No. There is no activation, no server and no account check. The executable
+          works offline.</p>
+      </details>
+      <details>
+        <summary>Why Windows only?</summary>
+        <p>The USB bridge uses Windows SetupAPI and the <code>USBPRINT</code> device. On
+          Linux and macOS the front end builds and runs, but the bridge reports itself as
+          unavailable and no device is contacted.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="article" id="guide">
+    <div class="wrap">
+      <h2>Resetting an Epson waste ink pad counter</h2>
+      <p>
+        When an Epson reports that the waste ink pad is at the end of its service life,
+        the firmware blocks printing even though the print head may still be fine. The
+        message refers to an internal counter that adds up every cleaning cycle; the
+        physical absorber is a separate thing and has to be dealt with too.
+      </p>
+      <h3>How it works with InkReset</h3>
+      <ol>
+        <li>Connect the printer over USB and turn it on. Detection is automatic.</li>
+        <li>Check the counter readings: current value and full scale.</li>
+        <li>Run the safe write test, which writes one byte back unchanged.</li>
+        <li>Reset only if the model shows a verified reset table, and type its exact
+          <code>MDL:</code> string.</li>
+        <li>Read again to confirm the counter reached zero.</li>
+      </ol>
+      <h3>Before you reset</h3>
+      <p>
+        Replace or clean the pad. A zeroed counter over a saturated absorber only delays
+        the problem and can end in a spill inside the machine. If you would rather not take
+        the printer apart, have the maintenance done by a service centre and use InkReset
+        for the software side only.
+      </p>
+      <h3>Which models are covered</h3>
+      <p>
+        The embedded database targets the Epson family with IEEE 1284.4 support, from
+        Expression Home and WorkForce to EcoTank and the XP, WF, ET and L series. Even so,
+        the only model verified on hardware is the XP-530.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand">INKRESET</span>
+    <span>local service tool</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/datacas/inkreset">GitHub</a>
+    <a href="https://github.com/datacas/inkreset/blob/main/LICENSE">MIT</a>
+    <a href="../" hreflang="es">Español</a>
+  </div>
+  <div class="wrap" style="margin-top:14px; font-size:12px;">
+    Independent open-source reconstruction, not affiliated with the original
+    manufacturer. Epson is a trademark of Seiko Epson Corporation.
+  </div>
+</footer>
+
+</body>
+</html>

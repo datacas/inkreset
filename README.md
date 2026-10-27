@@ -16,6 +16,10 @@
   <img alt="Platform" src="https://img.shields.io/badge/platform-windows%20x64-2b6cb0?style=flat-square">
 </p>
 
+<p align="center">
+  <strong>English</strong> · <a href="README.es.md">Español</a>
+</p>
+
 InkReset is an open-source desktop utility that reads and resets the **waste-ink
 counters** of Epson printers over USB. It talks to the printer directly through
 IEEE 1284.4 and the Epson EEPROM service commands — no vendor account, no licence

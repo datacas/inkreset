@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InkReset — Reinicia el contador de la almohadilla de tu Epson por USB (Windows)</title>
+<meta name="description" content="Herramienta libre para Windows que lee y reinicia el contador de tinta residual de impresoras Epson por USB. Sin cuenta, sin clave de licencia y sin conexión. Probada con una Epson XP-530.">
+<link rel="canonical" href="https://datacas.github.io/inkreset/">
+<link rel="alternate" hreflang="es" href="https://datacas.github.io/inkreset/">
+<link rel="alternate" hreflang="en" href="https://datacas.github.io/inkreset/en/">
+<link rel="alternate" hreflang="x-default" href="https://datacas.github.io/inkreset/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InkReset">
+<meta property="og:title" content="InkReset — contador de tinta residual de Epson por USB">
+<meta property="og:description" content="Lee y reinicia el contador de la almohadilla de residuos de tu Epson. Local, sin clave y de código abierto. Probado con una XP-530.">
+<meta property="og:url" content="https://datacas.github.io/inkreset/">
+<meta property="og:image" content="https://datacas.github.io/inkreset/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="InkReset — contador de tinta residual de Epson por USB">
+<meta name="twitter:description" content="Lee y reinicia el contador de la almohadilla de residuos de tu Epson. Local, sin clave y de código abierto.">
+<meta name="twitter:image" content="https://datacas.github.io/inkreset/social-preview.png">
+<meta name="theme-color" content="#191e1b">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "InkReset",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "softwareVersion": "0.2.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "downloadUrl": "https://github.com/datacas/inkreset/releases/latest",
+  "codeRepository": "https://github.com/datacas/inkreset",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "description": "Utilidad de escritorio de código abierto que lee y reinicia el contador de tinta residual de impresoras Epson por USB mediante IEEE 1284.4."
+}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="./">
+      <img src="logo.png" alt="">
+      INKRESET
+    </a>
+    <nav class="topnav">
+      <a href="#funciones">Funciones</a>
+      <a href="#capturas">Capturas</a>
+      <a href="#instalar">Instalar</a>
+      <a href="#seguridad">Seguridad</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="https://github.com/datacas/inkreset">GitHub</a>
+    </nav>
+    <a class="lang" href="en/" hreflang="en">EN</a>
+    <a class="btn btn-primary" href="https://github.com/datacas/inkreset/releases/latest">Descargar</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="mono kicker">Banco de servicio local · Windows x64</div>
+        <h1>Tinta residual,<br>bajo control.</h1>
+        <p class="lead">
+          Lee y reinicia el contador de la almohadilla de residuos de tu Epson por USB.
+          Sin cuenta, sin clave de licencia y sin conexión: la aplicación habla
+          directamente con la impresora mediante IEEE 1284.4.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/datacas/inkreset/releases/latest">
+            Descargar para Windows
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/datacas/inkreset">Ver el código</a>
+        </div>
+        <p class="meta">Gratis · Código abierto · MIT · Sin instalador obligatorio</p>
+      </div>
+      <figure class="hero-shot">
+        <img src="bench.png" width="1920" height="1080"
+             alt="InkReset mostrando los contadores de una Epson XP-530: almohadilla principal al 19 % y almohadilla sin bordes al 0 %">
+      </figure>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <span class="mark" aria-hidden="true">▲</span>
+      <p>
+        <b>Reiniciar el contador no es mantenimiento.</b>
+        No limpia, no sustituye y no vacía el absorbente físico. Atiende la almohadilla
+        primero: reiniciar una almohadilla saturada puede hacer que la tinta se desborde.
+      </p>
+    </div>
+  </div>
+
+  <section id="probado">
+    <div class="wrap">
+      <div class="tested">
+        <div class="mono tag">Hardware probado</div>
+        <div>
+          <p>
+            InkReset solo se ha probado de principio a fin en una <b>Epson XP-530</b>
+            (<code>MDL:XP-530 Series</code>): lectura de los dos contadores y prueba de
+            escritura segura.
+          </p>
+          <p>
+            La base de datos integrada cubre muchos otros modelos Epson y el protocolo
+            debería funcionar en ellos, pero <b>esos modelos no están probados</b>. Si usas
+            otra impresora, haz primero una lectura y la prueba de escritura segura, y
+            reinicia bajo tu responsabilidad. Los autores no se hacen responsables de los
+            daños causados a otras impresoras.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="funciones">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Lo que hace, sin adornos</h2>
+        <p>Todo lo que ocurre en pantalla es una transacción USB real ejecutada por el
+          puente nativo en Rust.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Detección automática</h3>
+          <p>Al abrir, enumera las interfaces de impresora USB, lee el identificador
+            IEEE 1284 y resuelve el perfil del modelo en la base de datos integrada.</p>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Lecturas reales</h3>
+          <p>Cada contador que expone el modelo, con sus registros en bruto y el fondo de
+            escala que declara la propia impresora.</p>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Reinicio condicionado</h3>
+          <p>El modelo se vuelve a leer del dispositivo y hay que teclearlo exactamente.
+            Sin tabla de reinicio verificada, no se escribe nada.</p>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Prueba de escritura segura</h3>
+          <p>Una autoprueba reescribe un byte de la EEPROM sin cambiarlo y demuestra que
+            toda la ruta de escritura funciona.</p>
+        </article>
+        <article class="card">
+          <span class="num">05</span>
+          <h3>Solo local</h3>
+          <p>Sin telemetría, sin servidor de licencias y sin ninguna petición saliente.
+            Ajustes e historial se quedan en el equipo.</p>
+        </article>
+        <article class="card">
+          <span class="num">06</span>
+          <h3>Interfaz bilingüe</h3>
+          <p>Español por defecto, inglés disponible en Preferencias. Ninguna función
+            depende del idioma.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="capturas">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Capturas</h2>
+        <p>Tomadas con una XP-530 real conectada por USB.</p>
+      </div>
+      <div class="shots">
+        <figure class="shot wide">
+          <img src="bench.png" width="1920" height="1080" loading="lazy"
+               alt="Panel principal de InkReset con los contadores de residuos y el protocolo de reinicio">
+        </figure>
+        <figure class="shot">
+          <img src="models.png" width="1920" height="1080" loading="lazy"
+               alt="Índice de 846 modelos Epson documentados">
+        </figure>
+        <figure class="shot">
+          <img src="settings.png" width="1920" height="1080" loading="lazy"
+               alt="Preferencias y puente de hardware con el perfil de la impresora detectada">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="instalar">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Instalar</h2>
+        <p>Windows 10 u 11, 64 bits. No hay cuenta, ni clave, ni activación.</p>
+      </div>
+      <div class="install">
+        <article class="step">
+          <div class="mono">Recomendado</div>
+          <h3>Instalador</h3>
+          <p>Instala la aplicación y crea el acceso directo. Se puede desinstalar desde
+            Configuración como cualquier otro programa.</p>
+          <p><a href="https://github.com/datacas/inkreset/releases/latest">Instalador NSIS (.exe)</a></p>
+        </article>
+        <article class="step">
+          <div class="mono">Sin instalar</div>
+          <h3>Portable</h3>
+          <p>Un único ejecutable. Útil para llevar la herramienta en un pendrive de
+            servicio.</p>
+          <p><a href="https://github.com/datacas/inkreset/releases/latest">Compilación portable (.exe)</a></p>
+        </article>
+        <article class="step">
+          <div class="mono">Empresa</div>
+          <h3>Paquete MSI</h3>
+          <p>Para despliegue con directivas de grupo o herramientas de gestión.</p>
+          <p><a href="https://github.com/datacas/inkreset/releases/latest">Paquete MSI</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="seguridad">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Modelo de seguridad</h2>
+        <p>Escribir en la EEPROM de una impresora es irreversible. La aplicación está
+          construida alrededor de esa idea.</p>
+      </div>
+      <ul class="safety">
+        <li><b>Perfil verificado por el dispositivo.</b> El modelo se relee de la impresora
+          antes de escribir; la interfaz no puede proporcionarlo.</li>
+        <li><b>Confirmación escrita.</b> Hay que teclear la cadena <code>MDL:</code> exacta.</li>
+        <li><b>Sin tabla de reinicio no hay escritura.</b> Los modelos sin datos de reinicio
+          son de solo lectura.</li>
+        <li><b>Verificación posterior.</b> Los contadores se vuelven a leer y se devuelven
+          con el resultado.</li>
+        <li><b>Nunca se envían bytes sin verificar.</b> Cada trama se comprueba contra el
+          perfil antes de salir.</li>
+        <li><b>Aviso permanente.</b> La interfaz recuerda que reiniciar no atiende la
+          almohadilla física.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="wrap faq">
+      <div class="section-head">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <details>
+        <summary>¿Es gratis?</summary>
+        <p>Sí. El código es MIT y las versiones publicadas son gratuitas. No hay versión
+          «pro», ni clave, ni límite de reinicios.</p>
+      </details>
+      <details>
+        <summary>¿Envía datos a algún sitio?</summary>
+        <p>No. La aplicación no abre conexiones de red: habla con la impresora por USB y
+          guarda los ajustes en el almacenamiento local del equipo. No hay telemetría ni
+          registro remoto.</p>
+      </details>
+      <details>
+        <summary>¿Funciona con mi impresora Epson?</summary>
+        <p>Probablemente, pero solo está verificada una XP-530. La base de datos incluye
+          1.022 registros de impresora y 371 claves de especificación, y unas 930 resuelven
+          a un bloque de servicio utilizable. Si tu modelo no está probado, ejecuta primero
+          una lectura y la prueba de escritura segura, y asume el riesgo.</p>
+      </details>
+      <details>
+        <summary>¿Qué es el contador de la almohadilla de residuos?</summary>
+        <p>Es un contador interno que la impresora incrementa con cada limpieza de
+          cabezales. Cuando llega al límite, el firmware se detiene aunque la impresora
+          funcione. Reiniciarlo devuelve el contador a cero; no sustituye la almohadilla,
+          que sigue llena de tinta.</p>
+      </details>
+      <details>
+        <summary>¿Necesito clave de licencia o conexión a internet?</summary>
+        <p>No. No hay activación, ni servidor, ni comprobación de cuenta. El ejecutable
+          funciona sin red.</p>
+      </details>
+      <details>
+        <summary>¿Por qué solo Windows?</summary>
+        <p>El puente USB usa SetupAPI y el dispositivo <code>USBPRINT</code> de Windows. En Linux y
+          macOS la interfaz compila y arranca, pero el puente se declara no disponible y no
+          se contacta con ningún dispositivo.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="article" id="guia">
+    <div class="wrap">
+      <h2>Reiniciar el contador de la almohadilla en una Epson</h2>
+      <p>
+        Cuando una Epson muestra el aviso de que la almohadilla de tinta residual está
+        al final de su vida útil, el firmware bloquea la impresión aunque el cabezal siga
+        funcionando. El mensaje hace referencia a un contador interno que suma cada
+        limpieza; el absorbente físico es otra cosa y también hay que atenderlo.
+      </p>
+      <h3>Cómo se hace con InkReset</h3>
+      <ol>
+        <li>Conecta la impresora por USB y enciéndela. La detección es automática.</li>
+        <li>Comprueba la lectura de los contadores: valor actual y fondo de escala.</li>
+        <li>Ejecuta la prueba de escritura segura, que reescribe un byte sin cambiarlo.</li>
+        <li>Reinicia solo si el modelo aparece con tabla de reinicio verificada y escribes
+          su <code>MDL:</code> exacto.</li>
+        <li>Vuelve a leer para confirmar que el contador quedó a cero.</li>
+      </ol>
+      <h3>Antes de reiniciar</h3>
+      <p>
+        Sustituye o limpia la almohadilla. Un contador a cero con un absorbente saturado
+        solo retrasa el problema y puede acabar en un derrame dentro del equipo. Si no
+        quieres desmontar la impresora, lleva el mantenimiento a un servicio técnico y usa
+        InkReset solo para la parte lógica.
+      </p>
+      <h3>Qué modelos están cubiertos</h3>
+      <p>
+        La base de datos integrada está pensada para la familia Epson con soporte de
+        IEEE 1284.4, desde las Expression Home y WorkForce hasta las EcoTank y las series
+        XP, WF, ET y L. Aun así, la única verificada en hardware es la XP-530.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand">INKRESET</span>
+    <span>herramienta local de servicio</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/datacas/inkreset">GitHub</a>
+    <a href="https://github.com/datacas/inkreset/blob/main/LICENSE">MIT</a>
+    <a href="en/" hreflang="en">English</a>
+  </div>
+  <div class="wrap" style="margin-top:14px; font-size:12px;">
+    Reconstrucción independiente de código abierto, sin relación con el fabricante
+    original. Epson es una marca registrada de Seiko Epson Corporation.
+  </div>
+</footer>
+
+</body>
+</html>

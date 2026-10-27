@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Logs and local artefacts
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Installers and binaries
+*.exe
+*.msi
+*.msix
+*.nsis.zip

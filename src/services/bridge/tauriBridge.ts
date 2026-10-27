@@ -37,9 +37,6 @@ export const readBridgeStatus = (): Promise<BridgeStatus> =>
 export const listUsbPrinters = (): Promise<UsbPrinterInfo[]> =>
   invoke<UsbPrinterInfo[]>('list_usb_printers');
 
-export const readIeee1284Id = (path: string): Promise<string> =>
-  invoke<string>('read_ieee1284_id', { path });
-
 export interface ProfileSummary {
   key: string;
   title: string;

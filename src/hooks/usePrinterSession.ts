@@ -346,4 +346,3 @@ export function usePrinterSession() {
   };
 }
 
-export type PrinterSession = ReturnType<typeof usePrinterSession>;

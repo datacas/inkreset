@@ -6,7 +6,7 @@ export interface AppSettings {
   compact: boolean;
 }
 
-export const DEFAULT_SETTINGS: AppSettings = {
+const DEFAULT_SETTINGS: AppSettings = {
   language: 'es',
   reduceMotion: false,
   compact: false,

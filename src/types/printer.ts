@@ -1,7 +1,5 @@
 export type ConnectionState = 'online' | 'offline' | 'scanning';
 
-export type CounterKey = 'mainPad' | 'borderlessPad' | 'inkAbsorber';
-
 export interface WasteCounters {
   mainPad: number;
   borderlessPad: number;

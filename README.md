@@ -1,4 +1,12 @@
-# InkReset
+<p align="center">
+  <img src="docs/logo.png" alt="InkReset" width="96" />
+</p>
+
+<h1 align="center">InkReset</h1>
+
+<p align="center">
+  <a href="https://github.com/datacas/inkreset/releases/latest"><strong>Download the latest Windows release</strong></a>
+</p>
 
 InkReset is an open-source desktop utility that reads and resets the **waste-ink
 counters** of Epson printers over USB. It talks to the printer directly through
@@ -39,6 +47,16 @@ printers.
   telemetry, no remote logging and no outbound request.
 - **Headless probes.** The same native core can enumerate printers and read counters
   from the command line, without opening the window.
+
+## Screenshots
+
+![InkReset service bench reading an Epson XP-530](docs/bench.png)
+
+| Model index | Settings and hardware bridge |
+| --- | --- |
+| ![Model index](docs/models.png) | ![Settings](docs/settings.png) |
+
+![About this build](docs/about.png)
 
 ## Stack
 

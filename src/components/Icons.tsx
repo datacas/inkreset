@@ -38,17 +38,6 @@ export function UsbIcon({ size = 20, ...props }: IconProps) {
   );
 }
 
-export function KeyIcon({ size = 20, ...props }: IconProps) {
-  return (
-    <svg {...base(size)} {...props}>
-      <circle cx="8" cy="12" r="4" />
-      <path d="M12 12h9" />
-      <path d="M17 12v3" />
-      <path d="M20 12v2" />
-    </svg>
-  );
-}
-
 export function PrinterIcon({ size = 20, ...props }: IconProps) {
   return (
     <svg {...base(size)} {...props}>

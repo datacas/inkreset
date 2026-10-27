@@ -42,11 +42,6 @@ pub fn list_usb_printers() -> Result<Vec<UsbPrinter>, String> {
     usb::enumerate()
 }
 
-#[tauri::command]
-pub fn read_ieee1284_id(path: String) -> Result<String, String> {
-    usb::read_ieee1284_id(&path)
-}
-
 /// Search the embedded device database.
 ///
 /// Every record with a usable 1284.4 service block is returned (930 of the

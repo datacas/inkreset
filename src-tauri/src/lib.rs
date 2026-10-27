@@ -275,7 +275,6 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             commands::bridge_status,
             commands::list_usb_printers,
-            commands::read_ieee1284_id,
             commands::list_device_profiles,
             commands::read_waste_counters,
             commands::self_test_write,

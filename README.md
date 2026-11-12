@@ -34,7 +34,13 @@ key, no activation server and no network access.
 InkReset has only been tested end to end on an **Epson XP-530** (`MDL:XP-530 Series`):
 reading both waste counters and the safe write test. The embedded database covers many
 other Epson models and the protocol should work on them, but **those models are
-untested**.
+untested**. About 310 of them (XP, ET, L, WF, EP, PX and other series) have a complete
+profile with counter addresses and a reset table — see the full list in
+[COMPATIBILITY.md](COMPATIBILITY.md).
+
+**Help us test:** if you own one of those printers, run a read and the safe write test
+and [open an issue](https://github.com/datacas/inkreset/issues/new) with the model and
+the result.
 
 If you use a different printer, run a read and the safe write test first, and reset at
 your own risk. The authors accept no responsibility for damage caused to other
@@ -212,8 +218,9 @@ On Windows, `cargo test` in `src-tauri/` also covers the device database, the IE
   the raw register value and the printer's full-scale value.
 - **The model index is a curated reference list**, not a guarantee that every listed
   model exposes readable or resettable counters.
-- **Only the Epson XP-530 has been verified on hardware.** Other models should work
-  but must be tested by the user before a reset.
+- **Only the Epson XP-530 has been verified on hardware.** The models in
+  [COMPATIBILITY.md](COMPATIBILITY.md) should work but must be tested by the user before
+  a reset. Reports are welcome.
 
 ## License
 

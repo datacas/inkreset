@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>InkReset — Reinicia el contador de la almohadilla de tu Epson por USB (Windows)</title>
-<meta name="description" content="Herramienta libre para Windows que lee y reinicia el contador de tinta residual de impresoras Epson por USB. Sin cuenta, sin clave de licencia y sin conexión. Probada con una Epson XP-530.">
+<meta name="description" content="Herramienta libre para Windows que lee y reinicia el contador de tinta residual de impresoras Epson por USB. Sin cuenta, sin clave de licencia y sin conexión.">
 <link rel="canonical" href="https://datacas.github.io/inkreset/">
 <link rel="alternate" hreflang="es" href="https://datacas.github.io/inkreset/">
 <link rel="alternate" hreflang="en" href="https://datacas.github.io/inkreset/en/">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="InkReset">
 <meta property="og:title" content="InkReset — contador de tinta residual de Epson por USB">
-<meta property="og:description" content="Lee y reinicia el contador de la almohadilla de residuos de tu Epson. Local, sin clave y de código abierto. Probado con una XP-530.">
+<meta property="og:description" content="Lee y reinicia el contador de la almohadilla de residuos de tu Epson. Local, sin clave y de código abierto.">
 <meta property="og:url" content="https://datacas.github.io/inkreset/">
 <meta property="og:image" content="https://datacas.github.io/inkreset/social-preview.png">
 <meta property="og:image:width" content="1280">
@@ -118,6 +118,13 @@
             otra impresora, haz primero una lectura y la prueba de escritura segura, y
             reinicia bajo tu responsabilidad. Los autores no se hacen responsables de los
             daños causados a otras impresoras.
+          </p>
+          <p>
+            Unos 310 modelos (series XP, ET, L, WF, EP, PX y otras) tienen un perfil
+            completo con direcciones de contadores y tabla de reinicio, así que deberían
+            funcionar: <a href="https://github.com/datacas/inkreset/blob/main/COMPATIBILITY.md">consulta la lista completa</a>. Si tienes uno, haz una
+            lectura y la prueba de escritura segura y <a href="https://github.com/datacas/inkreset/issues/new">cuéntanos el
+            resultado</a> para ayudarnos a verificarlo.
           </p>
         </div>
       </div>
@@ -270,7 +277,9 @@
         <p>Probablemente, pero solo está verificada una XP-530. La base de datos incluye
           1.022 registros de impresora y 371 claves de especificación, y unas 930 resuelven
           a un bloque de servicio utilizable. Si tu modelo no está probado, ejecuta primero
-          una lectura y la prueba de escritura segura, y asume el riesgo.</p>
+          una lectura y la prueba de escritura segura, y asume el riesgo. Unos 310 modelos
+          tienen datos completos de lectura y reinicio: <a href="https://github.com/datacas/inkreset/blob/main/COMPATIBILITY.md">consulta la
+          lista</a>.</p>
       </details>
       <details>
         <summary>¿Qué es el contador de la almohadilla de residuos?</summary>
@@ -322,7 +331,8 @@
       <p>
         La base de datos integrada está pensada para la familia Epson con soporte de
         IEEE 1284.4, desde las Expression Home y WorkForce hasta las EcoTank y las series
-        XP, WF, ET y L. Aun así, la única verificada en hardware es la XP-530.
+        XP, WF, ET y L. Aun así, la única verificada en hardware es la XP-530. <a href="https://github.com/datacas/inkreset/blob/main/COMPATIBILITY.md">Mira qué modelos
+        deberían funcionar</a> y ayúdanos a probarlos.
       </p>
     </div>
   </section>

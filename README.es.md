@@ -36,7 +36,13 @@ acceso a la red.
 InkReset solo se ha probado de principio a fin en una **Epson XP-530**
 (`MDL:XP-530 Series`): lectura de los dos contadores de residuos y prueba de escritura
 segura. La base de datos integrada cubre muchos otros modelos Epson y el protocolo
-debería funcionar en ellos, pero **esos modelos no están probados**.
+debería funcionar en ellos, pero **esos modelos no están probados**. Unos 310 (series
+XP, ET, L, WF, EP, PX y otras) tienen un perfil completo con direcciones de contadores y
+tabla de reinicio: consulta la lista completa en [COMPATIBILITY.md](COMPATIBILITY.md).
+
+**Ayúdanos a probar:** si tienes una de esas impresoras, haz una lectura y la prueba de
+escritura segura y [abre una incidencia](https://github.com/datacas/inkreset/issues/new)
+con el modelo y el resultado.
 
 Si usas otra impresora, haz primero una lectura y la prueba de escritura segura, y
 reinicia bajo tu responsabilidad. Los autores no se hacen responsables de los daños
@@ -223,7 +229,8 @@ lectura y reinicio contra una impresora falsa con estado.
 - **El índice de modelos es una lista de referencia curada**, no una garantía de que
   cada modelo listado exponga contadores legibles o reiniciables.
 - **Solo la Epson XP-530 está verificada en hardware.** Otros modelos deberían
-  funcionar, pero el usuario debe probarlos antes de reiniciar.
+  funcionar (ver [COMPATIBILITY.md](COMPATIBILITY.md)), pero el usuario debe
+  probarlos antes de reiniciar. Se agradecen los informes.
 
 ## Licencia
 

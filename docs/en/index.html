@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>InkReset — Reset your Epson waste ink pad counter over USB (Windows)</title>
-<meta name="description" content="Free Windows tool that reads and resets the waste ink pad counter of Epson printers over USB. No account, no licence key, no network. Tested on an Epson XP-530.">
+<meta name="description" content="Free Windows tool that reads and resets the waste ink pad counter of Epson printers over USB. No account, no licence key, no network.">
 <link rel="canonical" href="https://datacas.github.io/inkreset/en/">
 <link rel="alternate" hreflang="es" href="https://datacas.github.io/inkreset/">
 <link rel="alternate" hreflang="en" href="https://datacas.github.io/inkreset/en/">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="InkReset">
 <meta property="og:title" content="InkReset — Epson waste ink counter over USB">
-<meta property="og:description" content="Read and reset your Epson waste ink pad counter. Local, keyless and open source. Tested on an XP-530.">
+<meta property="og:description" content="Read and reset your Epson waste ink pad counter. Local, keyless and open source.">
 <meta property="og:url" content="https://datacas.github.io/inkreset/en/">
 <meta property="og:image" content="https://datacas.github.io/inkreset/social-preview.png">
 <meta property="og:image:width" content="1280">
@@ -116,6 +116,12 @@
             work on them, but <b>those models are untested</b>. On a different printer, run a
             read and the safe write test first, then reset at your own risk. The authors
             accept no responsibility for damage caused to other printers.
+          </p>
+          <p>
+            About 310 models (XP, ET, L, WF, EP, PX and other series) have a complete
+            profile with counter addresses and a reset table, so they are expected to work:
+            <a href="https://github.com/datacas/inkreset/blob/main/COMPATIBILITY.md">see the full list</a>. If you own one, run a read and the safe
+            write test and <a href="https://github.com/datacas/inkreset/issues/new">report the result</a> to help us verify it.
           </p>
         </div>
       </div>
@@ -264,7 +270,8 @@
         <p>Probably, but only an XP-530 is verified. The database ships 1,022 printer
           records and 371 spec keys, and roughly 930 resolve to a usable service block. If
           your model is untested, run a read and the safe write test first, and accept the
-          risk.</p>
+          risk. About 310 models have full read and reset data: <a href="https://github.com/datacas/inkreset/blob/main/COMPATIBILITY.md">check the
+          list</a>.</p>
       </details>
       <details>
         <summary>What is the waste ink pad counter?</summary>
@@ -316,7 +323,8 @@
       <p>
         The embedded database targets the Epson family with IEEE 1284.4 support, from
         Expression Home and WorkForce to EcoTank and the XP, WF, ET and L series. Even so,
-        the only model verified on hardware is the XP-530.
+        the only model verified on hardware is the XP-530. <a href="https://github.com/datacas/inkreset/blob/main/COMPATIBILITY.md">See which models
+        should work</a> and help us test them.
       </p>
     </div>
   </section>
